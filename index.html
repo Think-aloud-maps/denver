@@ -212,8 +212,8 @@
             { title: "Current Time", info: "8:59 AM." },
             { title: "Address of Origin", info: "19310 E Camp Hale Wy Bldg. 1510, Aurora, CO 80018." },
             { title: "Address of Destination", info: "609 Golden Eagle Cir, Golden, CO 80401." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "32.53 miles." },
+            { title: "Estimated Time to Destination", info: "54 minutes." },
             { title: "State of Charge of Battery", info: "10% charge." },
             { title: "Range of Current Battery", info: "30 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "22.5 miles." },
@@ -231,10 +231,10 @@
                 name: 'Crown Hill Park',
 
                 location: '9357 W 26th Ave, Wheat Ridge, CO 80215, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '26.27',
+                originTime: '49',
+                destDistance: '9.77',
+                destTime: '19',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Park 17 / Kairoi Apartments',
 
                 location: '1655 N Lafayette St, Denver, CO 80218, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '14.08',
+                originTime: '45',
+                destDistance: '15.84',
+                destTime: '30',
                 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -874,8 +874,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
